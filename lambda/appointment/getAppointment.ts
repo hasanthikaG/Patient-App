@@ -6,8 +6,6 @@ export const handler = async (
   event: APIGatewayEvent,
 ): Promise<APIGatewayProxyResult> => {
   try {
-    console.log("request:", JSON.stringify(event, undefined, 2));
-
     const dynamoDB = new AWS.DynamoDB.DocumentClient({
       region: process.env.REGION,
     });
@@ -15,7 +13,7 @@ export const handler = async (
       event?.headers?.Authorization as string,
     );
     const patientId = tokenDecode.sub;
-    console.log("patientId", patientId);
+
     const tableName = process.env.APPOINTMENTS_TABLE_NAME as string;
 
     const scanResult = await dynamoDB

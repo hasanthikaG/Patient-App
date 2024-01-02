@@ -2,7 +2,6 @@ import * as lambda from "aws-cdk-lib/aws-lambda";
 import { Construct } from "constructs";
 import * as lambdaNodejs from "aws-cdk-lib/aws-lambda-nodejs";
 import * as path from "path";
-import { DynamoEventSource } from "aws-cdk-lib/aws-lambda-event-sources";
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
 import { Duration } from "aws-cdk-lib";
 import { LambdaFunction } from "aws-cdk-lib/aws-events-targets";

@@ -1,6 +1,5 @@
 import * as lambda from "aws-cdk-lib/aws-lambda";
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
-import { StreamViewType } from "aws-cdk-lib/aws-dynamodb";
 import { Construct } from "constructs";
 import * as lambdaNodejs from "aws-cdk-lib/aws-lambda-nodejs";
 import * as path from "node:path";
